@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <style type="text/css"><!--
+
+    td.past-month {
+        color: #bbb;
+    }
+
+    #cal table {
+        margin: 0 10%;
+        width: 80%;
+        height: 80%;
+    }
+
+    #cal h1 {
+        background-color: #fff;
+        padding: 3px;
+    }
+
+    //--></style>
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="twelve columns centered">
+            <div id="cal">
+            </div>
+        </div>
+    </div>
+<div id='calendar'></div>
+{% endblock %}
+
+{% block tail %}
+    {{ super() }}
+    <script type="text/javascript">
+   $(document).ready(function() {
+       // page is now ready, initialize the calendar...
+       $('#calendar').fullCalendar({// put your options and callbacks here
+            header: {
+	        left:   'title',
+                center: '',
+                right:  'today prev,next'
+	    }
+       })
+   });
+</script>
+{% endblock %}
