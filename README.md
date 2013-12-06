@@ -1,12 +1,9 @@
-flask-calendar
+NICal
 ==============
 
-A calendar using Flask, Jinja and Foundation's Orbit
+A calendar using for NI's interesting events. Built with [FullCalendar](http://arshaw.com/fullcalendar)
 
 ## Requirements
 
 Only Flask, Foundation framework is included.
 
-## Run
-
-`python server.py`
