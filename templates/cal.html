@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block head %}
-    {{ super() }}
-    <style type="text/css"><!--
+{{ super() }}
+<style type="text/css"><!--
 
     td.past-month {
         color: #bbb;
@@ -23,27 +23,32 @@
 {% endblock %}
 
 {% block body %}
-    <div class="row">
-        <div class="twelve columns centered">
-            <div id="cal">
-            </div>
-        </div>
-    </div>
 <div id='calendar'></div>
 {% endblock %}
 
 {% block tail %}
-    {{ super() }}
-    <script type="text/javascript">
-   $(document).ready(function() {
-       // page is now ready, initialize the calendar...
-       $('#calendar').fullCalendar({// put your options and callbacks here
-            header: {
-	        left:   'title',
-                center: '',
-                right:  'today prev,next'
-	    }
-       })
-   });
-</script>
-{% endblock %}
+{{ super() }}
+<script type="text/javascript">
+    $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                year :{{today.year}},
+                month :{{today.month - 1}},
+                firstDay:1,
+                header:{
+                    left:'prev',
+                    center:'title',
+                    right:'next'
+                },
+                eventSources:[
+                    {% for source in sources %}
+                        {
+                        'className':'{{source.name}}',
+                        'url':'{{source.url}}'
+                        }
+                    {% endfor %}
+                ] 
+
+                });
+            });
+        </script>
+        {% endblock %}

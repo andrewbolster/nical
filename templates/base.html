@@ -22,6 +22,8 @@
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='events.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='theming.css') }}">
 	<link rel='stylesheet' type='text/css' href=//cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.css"></link>
 	<link rel='stylesheet' type='text/css' href=//cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.print.css"></link>
     {% endblock %}
@@ -52,6 +54,7 @@
         <script src="{{ url_for('static', filename='foundation/javascripts/app.js') }}"></script>
 	<!-- fullcalendar--!>
 	<script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.min.js"></script>
+	<script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/gcal.js"></script>
     {% endblock %}
 </body>
 </html>
