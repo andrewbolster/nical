@@ -1,0 +1,11 @@
+.fc-event-time{
+  font-weight : bold;
+  padding : 0 30px 10px 30px;
+}
+.fc-past{
+  opacity : 0.3;
+}
+.fc-today{
+  font-weight : bold;
+  text-decoration : underline;
+}
