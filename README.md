@@ -1,11 +1,19 @@
 NICal
 ==============
 
-A calendar using for NI's interesting events. Built with [FullCalendar](http://arshaw.com/fullcalendar)
+A calendar for NI's interesting events. Built with [FullCalendar](http://arshaw.com/fullcalendar)
 
 ## Requirements
 
 Only Flask, Foundation framework is included.
+
+Currently set up on a [DigitalOcean](http://digitalocean.com) Droplet with post-commit hook for rapid rollout
+
+## Caveat 
+
+I am not a web developer and I'm not a designer. 
+
+This was built at [Farset Labs](http://farsetlabs.org.uk) as part of a "Innovation Hackathon"
 
 ## Get Added
 
